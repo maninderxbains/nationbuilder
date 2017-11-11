@@ -1,0 +1,37 @@
+.top-nav {
+	margin-bottom:0px;
+	font-weight: bold;
+	font-size: 17px;
+	border-bottom: 1px solid #ddd;
+	margin-left: 0;
+	list-style: none;
+}
+
+.top-nav li {
+	margin-bottom:-1px;
+	float:left;
+	line-height: 20px;
+}
+
+.top-nav li>a{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px 4px 0 0;
+	padding-right: 12px;
+	padding-left: 12px;
+	margin-right: 2px;
+	display: block;
+	color: #999999;
+}
+
+.top-nav > li.active {
+    background-color: #EFEFEF;
+    border-bottom: 1px solid #EFEFEF;
+    border-top: 3px solid #27a9e3;
+}
+
+.top-nav > li.active > a{
+	color:#666;
+}
