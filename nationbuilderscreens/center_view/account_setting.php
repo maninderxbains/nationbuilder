@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<div class="form-actions">
-					<button type="submit" class="btn btn-success">Connect</button>
+					<button type="submit" class="btn btn-success">Save & Connect</button>
 				</div>
 			</form>
 		</div>
