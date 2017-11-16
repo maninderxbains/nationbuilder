@@ -97,7 +97,7 @@ class Login extends Main_Controller {
 		die();
 	}
 	
-	public function validateUser () 
+	public function registerUser () 
 	{
 		if ($_POST) {
 			if ( (!empty($_POST["name"]) && isset($_POST["name"])) && (!empty($_POST["email"]) && isset($_POST["email"]))  && (!empty($_POST["password"]) && isset($_POST["password"])) && (!empty($_POST["nation"]) && isset($_POST["nation"])) ) {
@@ -105,19 +105,22 @@ class Login extends Main_Controller {
 				$email = $_POST["email"];
 				$password = $_POST["password"];
 				$nation = $_POST["nation"];
-				
+				$current_date_time = date("Y-m-d H:i:s");
 				$users_where_cond = array("email"=>$email);
 				$email_exist_status = $this->CM->checkExistingRecord("users",$users_where_cond);
+				
 				if (empty($email_exist_status)) {
-					$nations_where_cond = array("email"=>$email);
+					$nations_where_cond = array("slug"=>$nation);
 					$nationslug_exists = $this->CM->checkExistingRecord("nations",$nations_where_cond);
 					if (empty($nationslug_exists)) {
-						$current_date_time = date("Y-m-d H:i:s");
+						
 						$password = password_hash($password, PASSWORD_DEFAULT);
-						$new_user_data = array("email"=>$email,"password"=>$password,"");
+						$new_user_data = array("email"=>$email,"password"=>$password,"complete_name"=>$name,"group_id"=>"3","group_id"=>"3","created_on"=>$current_date_time);
 						$new_user_id = $this->CM->createNewRecordWithId($new_user_data,"users");
+						$new_nation_data = array("user_id"=>$new_user_id,"slug"=>$nation);
+						$response = array("error"=>"0","message"=> "registered_successfully,login to continue","email_exist"=>"0","nationslug_exist"=>"0","user_registered"=>"1");
 					} else {
-						$response = array("error"=>"0","message"=> "nation slug alraedy registered","email_exist"=>"0","nationslug_exist"=>"1","user_registered"=>"0");
+						$response = array("error"=>"0","message"=> "nation slug already registered","email_exist"=>"0","nationslug_exist"=>"1","user_registered"=>"0");
 					}
 					
 				} else {
