@@ -37,18 +37,25 @@
 											<span class="add-on"><i class="icon-calendar"></i></span>
 										</div>
 								</div>
-								<div class="span2" style="margin-left: 0px;text-align: center;margin-top: 50px;">
+								<div class="span3" style="text-align: center;">
+									<p style="margin: 10px 0px;text-align: center;font-size: 14px;"><b>Or Filter By</b></p>
+									<input type="text" class="span11" placeholder="Last Name" />
+								</div>
+								<div class="span3" style="margin-left: 0px;text-align: center;margin-top: 40px;">
+									<button type="submit" class="btn btn-success">Search</button>
+								</div>
+								<!--<div class="span2" style="margin-left: 0px;text-align: center;margin-top: 50px;">
 									<p><b>OR</b></p>
 								</div>
 								<div class="span4" style="margin-left: 0px;text-align: center;margin-top: 50px;">
 									<input type="text" class="span11" placeholder="Last Name" />
-								</div>
+								</div>-->
 							</div>
 							<!--<p style="text-align: center;margin: 5px;"><b>OR</b></p>
 							<input type="text" class="span11" placeholder="Last Name" />-->
-							<div class="span12" style="text-align: center;margin-top: 15px;">
+							<!--<div class="span12" style="text-align: center;margin-top: 15px;">
 								<button type="submit" class="btn btn-success">Search</button>
-							</div>
+							</div>-->
 						</form>
 					</div>
 				</div>

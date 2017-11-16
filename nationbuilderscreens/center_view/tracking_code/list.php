@@ -1,5 +1,5 @@
 <div>
-	<p><a href="add-tracking-code.php" class="btn">Add Tracking Code</a></p>			
+	<p><a href="add-tracking-code.php" class="btn tip-bottom" title="Tracking codes are created in NationBuilder and identify which transactions are tied to specific receipt templates in Facturly and campaigns or events in NationBuilder. ">Add Tracking Code</a></p>			
 	<div class="widget-box">
 		<div class="widget-title">
 			<span class="icon"><i class="icon-th"></i></span>

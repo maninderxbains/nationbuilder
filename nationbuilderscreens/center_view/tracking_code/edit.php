@@ -5,7 +5,7 @@
           <h5>Edit Tracking Code</h5>
         </div>
 		<div class="widget-content nopadding">
-			<form action="#" method="post" class="form-horizontal">
+			<form action="tarcking-codes.php" method="post" class="form-horizontal">
 				<div class="control-group">
 					<label class="control-label">Tracking Code :</label>
 					<div class="controls">

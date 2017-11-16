@@ -1,4 +1,7 @@
 <div>
+	<p style="font-size:16px;">
+		<b>Customize the email donors receive with their receipt.</b>
+	</p>
 	<div class="widget-box">
 		<div class="widget-title">
 			<ul class="nav nav-tabs">
@@ -30,7 +33,7 @@
 										<input type="text" class="span11 tip-bottom" placeholder="BCC Receipt Address" title="Copy an internal address or BCC NationBuilder to log the email message in your nation." />
 									</p>
 									<p>
-										<input type="text" class="span11" placeholder="Reply To Address" required />
+										<input type="text" class="span11 tip-top" placeholder="Reply To Address" title="When a receipt is delivered via email and the recipient replies to the email, who should receive the reply? This can be a person or distribution list." />
 									</p>
 								</div>
 							</div>
@@ -75,7 +78,7 @@
 										<input type="text" class="span11 tip-bottom" placeholder="BCC Receipt Address" title="Copy an internal address or BCC NationBuilder to log the email message in your nation." />
 									</p>
 									<p>
-										<input type="text" class="span11" placeholder="Reply To Address" required />
+										<input type="text" class="span11 tip-top" placeholder="Reply To Address" title="When a receipt is delivered via email and the recipient replies to the email, who should receive the reply? This can be a person or distribution list." />
 									</p>
 								</div>
 							</div>
@@ -120,7 +123,7 @@
 										<input type="text" class="span11 tip-bottom" placeholder="BCC Receipt Address" title="Copy an internal address or BCC NationBuilder to log the email message in your nation." />
 									</p>
 									<p>
-										<input type="text" class="span11" placeholder="Reply To Address" required />
+										<input type="text" class="span11 tip-top" placeholder="Reply To Address" title="When a receipt is delivered via email and the recipient replies to the email, who should receive the reply? This can be a person or distribution list." />
 									</p>
 								</div>
 							</div>

@@ -33,13 +33,13 @@
 									</label>
 								</p>	
 								
-								<p style="margin-top:20px;">
-									<label>
+								<p style="margin-top:20px;border-top:1px solid #1F262D;">
+									
 										<div class="checker tip-right" id="uniform-undefined" title="Check this box if you need to have a unique transaction number listed on your donation receipts. This is especially helpful for Canadian organizations." >
 											<span><input type="checkbox" name="radios" style="opacity: 0;" /></span>
 										</div>
 										Use sequential receipt number
-									</label>
+									
 								</p>
 							
 							<label class="control-label" style="text-align:left;">Next Receipt Number</label>
