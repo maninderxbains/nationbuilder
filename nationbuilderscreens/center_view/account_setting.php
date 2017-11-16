@@ -12,7 +12,8 @@
 					</div>
 				</div>
 				<div class="form-actions">
-					<button type="submit" class="btn btn-success">Save & Connect</button>
+					<span class="pull-left"><button type="submit" class="btn btn-success">Save</button></span>
+					<span class="pull-right"><button type="submit" class="btn btn-success">Connect</button></span>
 				</div>
 			</form>
 		</div>
