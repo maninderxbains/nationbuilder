@@ -211,7 +211,7 @@
 					return false;
 				}
 			
-				if (password=="") {
+				if (pass=="") {
 					$("#register_password_error").html("Password can't be empty");
 					return false;
 				}
@@ -235,15 +235,15 @@
 					{
 						response = JSON.parse(response);
 						if (response.error=="1") {
-							$("#login_password_error").html(response.message);
+							$("#register_nation_error").html(response.message);
 						}
 						if (response.error=="0") {
-							if (response.email_exist=="0" && response.user_authenticate=="0") {
-								$("#login_password_error").html(response.message);
-							} else if (response.email_exist=="1" && response.user_authenticate=="0") {
-								$("#login_password_error").html(response.message);
-							}  else if (response.email_exist=="1" && response.user_authenticate=="1") {
-								window.location.href = base_url+"dashboard";
+							if (response.email_exist=="1" && response.nationslug_exist=="0" && response.user_registered=="0") {
+								$("#register_nation_error").html(response.message);
+							} else if (response.email_exist=="0" && response.nationslug_exist=="1" && response.user_registered=="0") {
+								$("#register_nation_error").html(response.message);
+							}  else if (response.email_exist=="0" && response.nationslug_exist=="0" && response.user_registered=="1") {
+								$("#register_nation_error").html(response.message);
 							}
 						}
 					}
