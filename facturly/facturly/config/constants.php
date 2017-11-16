@@ -89,4 +89,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define("GOOGLE_OAUTH_CLIENT_ID","270499040807-i4a79skcrj2a9ndplmmhd1ochsc6b9q4.apps.googleusercontent.com");
 define("GOOGLE_OAUTH_CLIENT_SECRET","NhyLwjM82vBzusgBUlKzq7-G");
 define("GOOGLE_OAUTH_APPLICATION_NAME","Facturly");
-define("GOOGLE_REDIRECT_URI","http://localhost/nationbuilderscreensgit/nationbuilder/facturly/login");
+define("GOOGLE_REDIRECT_URI","http://localhost/nationbuildergit/nationbuilder/facturly/Login");
