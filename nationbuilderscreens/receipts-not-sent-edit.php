@@ -19,15 +19,18 @@
 	</head>
 	<body>
 		<?php	include("includes/header.php");	?>
-		<?php	include("includes/receipt_edit_sidebar.php");	?>
+		<?php	
+			/*include("includes/receipt_edit_sidebar.php");*/
+			include("includes/sidebar.php");
+		?>
 		
 		<!--main-container-part-->
 		<div id="content">
 			<div id="content-header">
-				<ul class="top-nav">
+				<!--<ul class="top-nav">
 					<li class="active" style="width:50%"><a href="receipts-sent.php">Receipts</a></li>
 					<li style="width:50%"><a href="index.php">Account</a></li>
-				</ul>
+				</ul>-->
 				
 			</div>
 			<div class="container-fluid">

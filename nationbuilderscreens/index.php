@@ -16,21 +16,25 @@
 	</head>
 	<body>
 		<?php	include("includes/header.php");	?>
-		<?php	include("includes/account_sidebar.php");	?>
+		<?php	
+				include("includes/sidebar.php");
+			/*include("includes/account_sidebar.php");	*/
+		
+		?>
 		
 		<!--main-container-part-->
 		<div id="content">
 			<div id="content-header">
-				<ul class="top-nav">
+				<!--<ul class="top-nav">
 					<li style="width:50%"><a href="receipts-sent.php">Receipts</a></li>
-					<li class="active" style="width:50%"><a href="index.php">Account</a></li>
-				</ul>
+					<li class="active" style="width:50%"><a href="index.php">Account</a></li>	
+				</ul>-->
 			</div>
 			<div class="container-fluid">
 				<div class="row-fluid">
 					<div class="widget-content tab-content">
 						<div class="span12">
-							<?php	include("center_view/account_template.php");	?>
+							<?php	include("center_view/receipt/not_sent.php");	?>
 						</div>
 					</div>
 				</div>
