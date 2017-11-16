@@ -26,6 +26,8 @@ class Main_Controller extends CI_Controller
 		/*view container files*/
 
 		/*Load different models*/
+		$this->load->model("User_Model","UM");
+		$this->load->model("Common_Model","CM");
 	}
 
 	function checkloginsession() {

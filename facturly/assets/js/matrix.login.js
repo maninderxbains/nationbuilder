@@ -1,24 +1,37 @@
 
 $(document).ready(function(){
 
-	var login = $('#loginform');
+	var login = $('#login_form');
 	var recover = $('#recoverform');
+	var register = $('#registerform');
 	var speed = 400;
 
 	$('#to-recover').click(function(){
 		
-		$("#loginform").slideUp();
+		$("#login_form").hide();
 		$("#recoverform").fadeIn();
+		$("#registerform").hide();
 	});
+	
 	$('#to-login').click(function(){
 		
+		$("#registerform").hide();
 		$("#recoverform").hide();
-		$("#loginform").fadeIn();
+		$("#login_form").fadeIn();
 	});
 	
+	$('#to-login1').click(function(){
+		
+		$("#registerform").hide();
+		$("#recoverform").hide();
+		$("#login_form").fadeIn();
+	});
 	
-	$('#to-login').click(function(){
-	
+	$('#to-register').click(function(){
+		
+		$("#registerform").fadeIn();
+		$("#recoverform").hide();
+		$("#login_form").hide();
 	});
     
     if($.browser.msie == true && $.browser.version.slice(0,3) < 10) {
