@@ -61,4 +61,46 @@ class Common_Model extends CI_Model {
 		}
 		return $return;
 	}
+	/********************************
+		Check if record already exists in db
+	*********************************/
+	public function validateExistingRecord($table,$where_cond)
+	{
+		$this->db->select("*");
+		$this->db->from($table);
+		$this->db->where($where_cond);
+		$query = $this->db->get();
+		if ($query->num_rows()>0) {
+			$return=true;
+		} else {
+			$return = false;
+		}
+		return $return;
+	}
+	
+	/********************************
+		Get Tracking Code List
+	*********************************/
+	public function getRecordList($table,$where_cond)
+	{
+		$this->db->select("*");
+		$this->db->from($table);
+		$this->db->where($where_cond);
+		$query = $this->db->get();
+		if ($query->num_rows()>0) {
+			$return = $query->result();
+		} else {
+			$return = array();
+		}
+		return $return;
+	}
+	
+	/********************************
+		Delete Record from table
+	*********************************/	
+	function deleteRecord($table,$column,$column_value)
+	{
+		$this->db->where($column,$column_value); 
+		$query = $this->db->delete($table);
+	}
 }
