@@ -36,6 +36,8 @@ function setActiveMenu () {
 	})
 }
 */
+
+/*
 function setActiveMenu () {
 	var path = window.location.href;
 	path = path.replace(/\/$/,"");
@@ -85,7 +87,45 @@ function setActiveMenu () {
 			$(this).closest("li").addClass("active");
 		}
 		*/
-	})
+/*	})
+}
+*/
+function setActiveMenu () {
+	var path = window.location.href;
+	path = path.replace(/\/$/,"");
+	path = decodeURIComponent(path);
+	
+	paths = path.split('/');
+	var lastSegment = paths.pop();
+	
+	/*alert(lastSegment);*/
+	$(".main_sidebar_li").each(function(){
+		
+		var current_li = $(this).find("a[href='"+lastSegment+"']");
+		var current_li_id = $(this).attr("id");
+	/*	alert(current_li.length);
+		if (current_li.length>0) {
+			alert(current_li.length);*/
+			$(".main_sidebar_li").removeClass("active");
+			$(".main_sidebar_li").removeClass("open");
+			if (lastSegment=="trackingcode" || lastSegment=="account" || lastSegment=="template" || lastSegment=="email" || lastSegment=="add" || lastSegment=="edit") {
+				/*$(this).closest("li").addClass("active");*/
+				$("#accounts").addClass("active");
+				$("#accounts").addClass("open");
+			} else if (lastSegment=="dashboard") {
+				$("#receipts-sent").addClass("active");
+				$("#accounts").addClass("open");
+				$("#receipts-sent").css({"display":"block"});
+				$("#receipts-not-sent").css({"display":"none"});
+			} else if (lastSegment=="receipt_sent") {
+				$("#receipts-not-sent").addClass("active");
+				$("#accounts").addClass("open");
+				$("#receipts-sent").css({"display":"none"});
+				$("#receipts-not-sent").css({"display":"block"});
+			}
+			
+	/*	}	*/
+	});
 }
 setActiveMenu();
 
@@ -114,3 +154,10 @@ $('select').select2();
 $("#tags").select2({
 	tags:["red", "green", "blue", "orange"]
 });
+
+/*
+$(".add_more_bcc").off();
+$(".add_more_bcc").on("focus",function(){
+	$(this).closest(".tab-pane").find(".add_new_bcc").css({"display":"block"});
+});
+*/
